@@ -1,0 +1,123 @@
+.landing {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: calc(100vw - 0.1rem);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.1);
+
+  .container3d {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 12rem;
+    margin-left: 25%;
+    gap: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid white;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    .mainName {
+      width: fit-content;
+    }
+
+    .mainAbout {
+      width: 70%;
+      line-height: 1.6;
+    }
+  }
+
+  .iconContainer {
+    width: fit-content;
+    display: flex;
+    width: 25%;
+    height: 27rem;
+    flex-direction: column;
+    margin-top: 12rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    gap: 1rem;
+
+    .socialIcons {
+      width: 3rem;
+      height: 3rem;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 0.1rem;
+      margin: 0.2rem;
+      margin-right: 2rem;
+
+      img {
+        filter: sepia(100%) hue-rotate(190deg) saturate(70%) brightness(90%);
+        transition: filter 0.3s ease;
+        
+        &:hover {
+          filter: grayscale(0%) brightness(100%);
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container3d {
+      margin-top: 10rem;
+      margin-left: 20%;
+      padding-left: 0.5rem;
+      border-left: none;
+
+      .mainAbout {
+        width: 70%;
+      }
+    }
+
+    .iconContainer {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container3d {
+      margin-top: 40%;
+      margin-left: 1%;
+      margin-right: 4%;
+      padding-left: 0rem;
+      padding-right: 0rem;
+      border-left: none;
+      gap: 1rem;
+      align-items: center;
+
+      h3 {
+        text-align: center;
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+      .mainAbout {
+        width: 80%;
+        font-size: 0.9rem;
+        padding-top: 1rem;
+        align-items: center;
+        text-align: center;
+      }
+
+      .mainName {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+    }
+  }
+}

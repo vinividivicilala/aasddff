@@ -1,0 +1,205 @@
+.contact {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #141516;
+  position: relative;
+  .body {
+    padding-top: 400px;
+    width: 100%;
+    max-width: 1800px;
+    background-color: #141516;
+
+    .title {
+      padding-bottom: 100px;
+      margin-left: 200px;
+      margin-right: 200px;
+      position: relative;
+      span {
+        display: flex;
+        align-items: center;
+        .imageContainer {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+          }
+        }
+        h2 {
+          margin-left: 0.3em;
+        }
+      }
+      h2 {
+        font-size: 5vw;
+        margin: 0px;
+        font-weight: 300;
+      }
+
+      svg {
+        position: absolute;
+        top: 30%;
+        left: 100%;
+      }
+    }
+
+    .contactSection {
+      height: 20vh;
+      position: relative;
+      display: flex;
+      margin: 0 10rem;
+
+      .contactBox {
+        width: 100%;
+        display: flex;
+
+        &:not(:first-child) {
+          border-left: 1px solid rgba(229, 208, 146, 0.2);
+          padding-left: 2rem;
+        }
+
+        .numberBox {
+          width: 20%;
+          align-content: center;
+          p {
+            color: white;
+          }
+        }
+
+        .inputBox {
+          width: 80%;
+
+          .error {
+            font-size: small;
+            color: #ff8d7b;
+            margin-left: 0.6rem;
+          }
+        }
+      }
+    }
+    .nav {
+      display: flex;
+      margin-top: 5rem;
+      justify-content: center;
+      // margin-left: 15%;
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      padding: 20px;
+
+
+      div {
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+        p,
+        h3 {
+          margin: 0px;
+          padding: 2.5px;
+          cursor: pointer;
+        }
+        img {
+          &::after {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background-color: white;
+            display: block;
+            margin-top: 2px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.2s linear;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+        .socialIcons {
+          width: 2.5rem;
+          height: 2.5rem;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0;
+          padding: 0.1rem;
+          margin: 0.7rem;
+
+          
+
+          img {
+            filter: sepia(100%) hue-rotate(190deg) saturate(70%) brightness(90%);
+            transition: filter 0.3s ease;
+
+            &:hover {
+              filter: grayscale(0%) brightness(100%);
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        span {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        h3 {
+          cursor: default;
+          font-weight: 300;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+
+    .body {
+      padding-top: 100px;
+
+      .title {
+        padding-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+
+      }
+
+      .contactSection {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+
+        .contactBox {
+          width: 100%;
+          padding-left: 2rem;
+
+        &:not(:first-child) {
+          border-left: 1px solid rgba(229, 208, 146, 0.2);
+          padding-left: 2rem;
+        }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+:root {
+  --page-background: #141516; 
+  --gradient-background: linear-gradient(to bottom, #0c0c0d, #0c0c0d, #0d0d0c);
+  --text-shadow: 0.5px 0.5px 1.5px rgba(255, 255, 255, 0.3);
+}
+
+//current color pallettes:-
+
+//https://coolors.co/palette/edf2fb-e2eafc-d7e3fc-ccdbfd-c1d3fe-b6ccfe-abc4ff
+
+body {
+  margin: 0px;
+  overflow: hidden; 
+  cursor: wait;
+  background: var(--gradient-background);
+  color: white;
+  font-family: var(--font-montreal);
+  text-shadow: var(--text-shadow);
+  transition-property: opacity,background,transform,filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+
+  @media (max-width: 768px) {
+    font-size: 90%; 
+    overflow: auto;
+    touch-action: pan-y;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 85%; 
+    overflow: auto;
+    touch-action: pan-y;
+  }
+}
+
+h2{
+  // color:#d4af37;
+  color: #e2eafc;
+  font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+h1{
+  // color:#d4af37;
+  color: #e2eafc;
+  font-size: 4rem;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
+}
+
+h3{
+  font-size: 1.5rem;
+  // color: #ddbf69;
+  color:#c1d3fe;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+p{
+  font-size: 1rem;
+  // color: #e5d092;
+  color: #abc4ff;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+}
+
+li {
+  color: #abc4ff;
+  font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+
+strong, b {
+  font-family: var(--font-montreal-bold);
+}
+
+.page-transition {
+  opacity: 0;
+  background: var(--page-background);
+  transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+}
